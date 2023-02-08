@@ -1,0 +1,11 @@
+Banque : ;banque LDNR ; Adresse : ;150 Rue de la Découverte, 31670 Labège
+
+Prénom ; Nom ; Adresse ; e-Mail ; Numéro de téléphone ; Numéro de compte; Type de compte ; Solde du compte ; 
+Jean;DUPONT;alo alo alo;toto31@gmail.com;(+33)775754875;111;compte courant;21212.2;
+Martin;ALBIN;68 rue XXXX 31000;toto34@gmail.com;(+33)754849900;222;livret A;12.2;
+Laura;LAPIE;26 rue XXXX 31000;toto24@gmail.com;(+33)756452222;333;compte bloque;3222.2;
+Jérôme;MICHEL;20 rue XXXX 31000;toto45@gmail.com;(+33)711111875;444;epargne logement;100002;
+Morgane;BOBON;19 rue XXXX 31000;toto31@gmail.com;(+33)775754875;555;compte courant;27760.2;
+Paul;MANGIN;68 rue XXXX 31000;toto34@gmail.com;(+33)754849999;666;livret A;12.2;
+Martha;CHAPON;26 rue XXXX 31000;toto24@gmail.com;(+33)756452222;777;compte bloque;3222.2;
+Laurent;PARIS;20 rue XXXX 31000;toto45@gmail.com;(+33)711111875;888;epargne logement;100002;

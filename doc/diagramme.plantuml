@@ -1,0 +1,115 @@
+@startuml Banque 31
+
+class Date
+{
+    - int jour 
+    - int mois
+    - int annee
+    --
+    - void Afficher()
+    - void Saisir()
+}
+
+abstract class Compte
+{
+    - int num_compte
+    - Date creation_de_compte
+    - double solde
+    - string type_compte
+    --
+    - void Afficher()
+    - void Saisir()
+    - void Afficher_solde()
+    - void Supp_compte()
+    - void Afficher_plafond()
+}
+
+class Compte_Courant
+{
+    - void Ajouter_argent()
+    - void Retirer_argent()
+    - void Afficher_Dix_operations()
+    - int Calcul_Agios()
+    - void Afficher_plafond()
+    /' fonction decouvert '/
+}
+
+class Compte_Bloque
+{
+    - void Ajouter_argent()
+    - void Afficher_echeance()
+    - void Afficher_Taux_interet()
+}
+
+class Compte_livre_A
+{
+    - void Ajouter_argent()
+    - void Retirer_argent()
+    - void Afficher_Taux_interet()
+    - void Afficher_plafond()
+}
+
+abstract class Compte_E_L
+{
+
+    /' Premier virement de 300E obligatoire 
+    minimum 75E par mois'/
+    - void Ajouter_Argent()
+    - void Afficher_Taux_interet()
+    - void Afficher_Plafond()
+    - void Afficher_Date()
+
+}
+
+abstract class Personne
+{
+    - string nom
+    - string prenom
+    - Date date_de_naissance
+    - string adresse_postale
+    - string adresse_mail
+    - string numero_de_tel
+    --
+    - void Saisir()
+    - void Afficher()
+
+
+}
+class Adherant
+{
+    - Personne adh
+    - Compte cmpt_adh
+    - string mdp
+    --
+    - void Saisir()
+    - void Afficher()
+    
+    
+
+
+
+}
+
+class Banque
+{
+    - string nom
+    - string adresse
+    - Adherant TAB_Adh[400]
+    --
+    - void Afficher()
+    - void Saisir()
+    - void Afficher_TAB_Adh()
+    - void Saisir_TAB_Adh()
+    - void Modifier_adresse()
+}
+
+Personne <|--l  Adherant : est
+Adherant "1"--l>"1..n" Compte : possède
+Banque "1"-->"0..n" Adherant : comprend
+Compte --l> Date  
+Compte <|-- Compte_Courant  
+Compte <|-- Compte_livre_A  
+Compte <|--Compte_Bloque  
+Compte <|-- Compte_E_L  
+
+@enduml
